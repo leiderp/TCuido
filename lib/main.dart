@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'Widgets/FormCard.dart';
+import 'Widgets/FormCardRegister.dart';
 
 void main() => runApp(MaterialApp(
       home: MyApp(),
@@ -12,8 +13,11 @@ class MyApp extends StatefulWidget {
   _MyAppState createState() => new _MyAppState();
 }
 
+enum Page { login, register }
+
 class _MyAppState extends State<MyApp> {
   bool _isSelected = false;
+  Page p = Page.login;
 
   void _radio() {
     setState(() {
@@ -94,7 +98,8 @@ class _MyAppState extends State<MyApp> {
                   SizedBox(
                     height: ScreenUtil.getInstance().setHeight(180),
                   ),
-                  FormCard(),
+                  //FormCard(),
+                  changePages(),
                   SizedBox(height: ScreenUtil.getInstance().setHeight(40)),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -161,7 +166,9 @@ class _MyAppState extends State<MyApp> {
                         style: TextStyle(fontFamily: "Poppins-Medium"),
                       ),
                       InkWell(
-                        onTap: () {},
+                        onTap: () {
+                          toRegister();
+                        },
                         child: Text("Registrarse",
                             style: TextStyle(
                                 color: Color(0xFF5d74e3),
@@ -208,5 +215,22 @@ class _MyAppState extends State<MyApp> {
         ],
       ),
     );
+  }
+
+  Widget changePages() {
+    switch (p) {
+      case Page.login:
+        return FormCard();
+        break;
+      case Page.register:
+        return FormCardRegister();
+        break;
+    }
+  }
+
+  void toRegister() {
+    setState(() {
+      p = Page.register;
+    });
   }
 }
