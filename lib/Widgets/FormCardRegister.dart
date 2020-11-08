@@ -100,11 +100,18 @@ class FormCardRegister extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.end,
               children: <Widget>[
                 Text(
-                  "Olvidaste Tu Contraseña?",
+                  "Ya tienes Cuenta?",
                   style: TextStyle(
                       color: Colors.blue,
                       fontFamily: "Poppins-Medium",
                       fontSize: ScreenUtil.getInstance().setSp(28)),
+                ),
+                InkWell(
+                  onTap: () {},
+                  child: Text(" Inicia Sesión",
+                      style: TextStyle(
+                          color: Color(0xFF5d74e3),
+                          fontFamily: "Poppins-Bold")),
                 )
               ],
             )
