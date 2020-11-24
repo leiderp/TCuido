@@ -170,22 +170,6 @@ class _GameState extends State<Game> {
             },
             child: Text("Siguiente"),
           ),
-          FlatButton(
-            onPressed: () {
-              Navigator.of(context).pushReplacement(
-                MaterialPageRoute(
-                  builder: (context) => Game(
-                    size: level,
-                  ),
-                ),
-              );
-              level *= 2;
-              countLevel = countLevel + 1;
-              times.add(time);
-              print(times);
-            },
-            child: Text("Parar"),
-          ),
         ],
       ),
     );
