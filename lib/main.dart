@@ -238,7 +238,7 @@ class _MyAppState extends State<MyApp> {
 }
 */
 import 'package:flutter/material.dart';
-import 'pages/game1_card.dart';
+import 'pages/game2_page.dart';
 
 /*
 import 'package:yotecuido/pages/alarm_page.dart';
@@ -279,7 +279,7 @@ class MyApp extends StatelessWidget {
           visualDensity: VisualDensity.adaptivePlatformDensity,
           scaffoldBackgroundColor: Colors.white,
           primaryColor: Colors.white),
-      home: Game(),
+      home: Game2(),
     );
   }
 }
