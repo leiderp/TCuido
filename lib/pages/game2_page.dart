@@ -32,7 +32,6 @@ class _Game2State extends State<Game2> {
     Future.delayed(const Duration(seconds: 5), () {
       startTimer();
       setState(() {
-        print("2 seconds done");
         questionPairs = getQuestionPairs();
         gridViewTiles = questionPairs;
         selected = false;
@@ -64,7 +63,7 @@ class _Game2State extends State<Game2> {
               SizedBox(
                 height: 40,
               ),
-              points != 800
+              points != 8
                   ? Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: <Widget>[
@@ -98,7 +97,7 @@ class _Game2State extends State<Game2> {
               SizedBox(
                 height: 20,
               ),
-              points != 800
+              points != 8
                   ? GridView(
                       shrinkWrap: true,
                       //physics: ClampingScrollPhysics(),
@@ -121,6 +120,8 @@ class _Game2State extends State<Game2> {
                           onTap: () {
                             setState(() {
                               points = 0;
+                              countErrors = 0;
+                              time = 0;
                               reStart();
                             });
                           },
