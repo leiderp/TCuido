@@ -240,7 +240,6 @@ class _MyAppState extends State<MyApp> {
 import 'package:flutter/material.dart';
 import 'pages/game2_page.dart';
 
-/*
 import 'package:yotecuido/pages/alarm_page.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 
@@ -267,8 +266,8 @@ void main() async {
   });
   runApp(MyApp());
 }
-*/
-void main() => runApp(MyApp());
+
+/*void main() => runApp(MyApp());*/
 
 class MyApp extends StatelessWidget {
   @override
@@ -279,7 +278,7 @@ class MyApp extends StatelessWidget {
           visualDensity: VisualDensity.adaptivePlatformDensity,
           scaffoldBackgroundColor: Colors.white,
           primaryColor: Colors.white),
-      home: Game2(),
+      home: AlarmPage(),
     );
   }
 }
