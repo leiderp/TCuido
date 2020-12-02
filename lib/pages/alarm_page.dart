@@ -263,6 +263,8 @@ class _AlarmPageState extends State<AlarmPage> {
                                                                   notaAlarma =
                                                                       myController
                                                                           .text;
+                                                                  Navigator.pop(
+                                                                      context);
                                                                 },
                                                                 child: Text(
                                                                     "Siguiente"),
