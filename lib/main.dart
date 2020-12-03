@@ -238,7 +238,7 @@ class _MyAppState extends State<MyApp> {
 }
 */
 import 'package:flutter/material.dart';
-import 'pages/resource_page.dart';
+import 'pages/tableInitContent.dart';
 
 /*
 import 'package:yotecuido/pages/alarm_page.dart';
@@ -279,7 +279,7 @@ class MyApp extends StatelessWidget {
           visualDensity: VisualDensity.adaptivePlatformDensity,
           scaffoldBackgroundColor: Colors.white,
           primaryColor: Colors.white),
-      home: HomePage(),
+      home: TablePage(),
     );
   }
 }
